@@ -14,6 +14,7 @@ class WeatherRepository {
 
     if(response.statusCode == 200){
       final json = jsonDecode(response.body);
+      // in ra gi tri json de xem no la gi
       return Weather.fromJson(json);
     }
     else{
