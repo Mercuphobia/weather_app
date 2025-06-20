@@ -5,6 +5,7 @@ import './weather_state.dart';
 
 class WeatherCubit extends Cubit<WeatherState>{
   final WeatherRepository repository;
+  // ý nghĩa của đoạn này: đối tượng của class này khi tạo cần dữ liệu thời tiết và trạng thái ban đầu là chưa load dữ liệu
   WeatherCubit(this.repository) : super(WeatherInitial());
 
   Future<void> fetchWeather(String city) async {
