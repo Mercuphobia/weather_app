@@ -41,6 +41,7 @@ class WeatherPage extends StatelessWidget {
                   return const CircularProgressIndicator();
                 }
                 else if (state is WeatherLoaded){
+                  // vì class Loaded khi tạo có 1 đối tượng weather nên có thể dùng
                   final weather = state.weather;
                   return Column(
                     children: [
