@@ -29,6 +29,7 @@ class WeatherPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 context.read<WeatherCubit>().fetchWeather(_controller.text);
+                print(context.read<WeatherCubit>().fetchWeather(_controller.text));
               },
               child: Text('Find'),
             ),

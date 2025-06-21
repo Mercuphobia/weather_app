@@ -1,10 +1,12 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'cubit/weather_cubit.dart';
-// import 'repository/weather_repository.dart';
-// import 'view/weather_page.dart';
-//
-// void main() {
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import './cubit/weather_cubit.dart';
+import './repository/weather_repository.dart';
+import './view/weather_page.dart';
+
+
+// void main(){
 //   runApp(const WeatherApp());
 // }
 //
@@ -14,23 +16,16 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return BlocProvider(
-//       create: (_) => WeatherCubit(WeatherRepository()),
-//       child: MaterialApp(
-//         debugShowCheckedModeBanner: false,
-//         title: 'Weather App',
-//         home: WeatherPage(),
-//       ),
+//         create: (_) => WeatherCubit(WeatherRepository()),
+//         child: MaterialApp(
+//           home: WeatherPage(),
+//         ),
 //     );
 //   }
 // }
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import './cubit/weather_cubit.dart';
-import './repository/weather_repository.dart';
-import './view/weather_page.dart';
-
 
 
 
@@ -45,9 +40,9 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
         create: (_) => WeatherCubit(WeatherRepository()),
-        child: MaterialApp(
-          home: WeatherPage(),
-        ),
+      child: MaterialApp(
+        home: WeatherPage(),
+      ),
     );
   }
 }
